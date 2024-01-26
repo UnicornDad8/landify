@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.hero-top {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+}
+
+.LeftBand1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.RightBand2 {
+  position: absolute;
+  bottom: 90px;
+  right: 0;
+}
+
+.RightBand1 {
+  position: absolute;
+  bottom: 175px;
+  right: 40px;
+}
+
+.hero-bottom {
+  position: relative;
+}
+
+.LeftBand2 {
+  position: absolute;
+  top: -35px;
+  left: 0;
+}
+
+.RightBand3 {
+  position: absolute;
+  top: -198px;
+  right: 0;
+}
