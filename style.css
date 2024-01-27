@@ -2,6 +2,7 @@
 
 ::root {
   --text-color: #111827;
+  --violet-background: #7c3aed;
 }
 
 * {
@@ -20,12 +21,6 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (max-width: 900px) {
-  html {
-    font-size: 50%;
-  }
-}
-
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -42,13 +37,13 @@ body {
 }
 
 .narvbar-nav {
-  width: 1200px;
-  height: 60px;
+  max-width: 1200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  min-height: 60px;
+  height: 90px;
+  padding: 20px;
 }
 
 .left-nav {
@@ -60,6 +55,10 @@ body {
   list-style: none;
   padding: 0;
   display: flex;
+}
+
+.menu {
+  display: none;
 }
 
 .logo {
@@ -93,6 +92,11 @@ body {
   flex: 1;
   justify-content: flex-end;
 }
+.nav-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
 
 .black-btn:not(:first-child) {
   margin-left: 20px;
@@ -108,7 +112,7 @@ body {
   padding: 10px 12px;
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 7px;
   outline: none;
   text-transform: capitalize;
   font-family: inherit;
@@ -155,13 +159,13 @@ body {
   width: 100%;
   height: auto;
   position: relative;
-  top: 0px;
+  top: 0;
   left: 0;
 }
 
 .hero-background {
-  position: relative;
-  top: -60px;
+  position: absolute;
+  top: -90px;
   left: 0;
   z-index: -1;
 }
@@ -220,4 +224,163 @@ body {
   top: -198px;
   right: 0;
   z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 80;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-left {
+  width: 648px;
+}
+
+.hero-left h2 {
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  line-height: 72px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+  margin-top: -120px;
+}
+
+.hero-left p {
+  color: var(--text-color);
+  font-feature-settings: "liga" off;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+
+.hero-main-buttons {
+  display: flex;
+}
+
+.btn {
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  font-feature-settings: "liga" off;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  border-radius: 7px;
+  border: none;
+  background: transparent;
+}
+
+.btn-primary {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.btn-link {
+  color: #7c3aed;
+}
+
+.hero-right {
+  display: flex;
+  align-items: center;
+}
+
+.hero-phone {
+  width: 320px;
+  height: 640px;
+}
+
+.hero-phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav-list {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    margin-left: 20px;
+  }
+
+  .hero-background {
+    top: 0;
+  }
+
+  .hero-top,
+  .background {
+    height: 900px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    margin-top: 150px;
+  }
+
+  .hero-left {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-buttons {
+    display: none;
+  }
+
+  .hero-section {
+    width: 100vw;
+  }
+
+  .background {
+    width: 100vw;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-left {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-left h2 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .LeftBand1 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .hero-main-buttons {
+    flex-direction: column;
+  }
 }
