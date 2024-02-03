@@ -362,6 +362,17 @@ body {
   padding: 0 10px;
 }
 
+.feature-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.feature-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .features-header h3 {
   text-align: center;
   color: var(--text-color);
@@ -399,7 +410,8 @@ body {
 }
 
 .feature-box {
-  width: 100%;
+  width: 360px;
+  margin: 0 auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -531,6 +543,10 @@ body {
     grid-templante-rows: repeat(3, min-content);
     column-gap: 20px;
     row-gap: 40px;
+  }
+
+  .feature-box {
+    width: 100%;
   }
 
   .feature-box-1 {
