@@ -104,13 +104,13 @@ body {
 }
 
 .black-btn {
-  width: 148px;
+  width: 168px;
   height: 40px;
   background: #000;
   display: flex;
   align-items: center;
   text-align: left;
-  padding: 10px 12px;
+  padding: 10px;
   color: #fff;
   border: none;
   border-radius: 7px;
@@ -128,7 +128,7 @@ body {
 
 .black-btn span {
   text-transform: uppercase;
-  font-size: 8px;
+  font-size: 6px;
   font-weight: 200;
 }
 
@@ -731,6 +731,81 @@ body {
   object-fit: contain;
 }
 
+/* ----------- Manager Section ------------ */
+.manager-section {
+  background: #1db5be;
+  padding: 0 30px;
+}
+
+.manager-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.manager-left {
+  width: 500px;
+  margin-top: 60px;
+}
+
+.manager-left h3 {
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.manager-left p {
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  font-feature-settings: "liga" off;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.6;
+}
+
+.manager-bottom-left {
+  margin-top: 80px;
+}
+
+.manager-left .get-span {
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  font-feature-settings: "liga" off;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  opacity: 1;
+}
+
+.manager-buttons {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.manager-right {
+  width: 592px;
+  height: auto;
+}
+
+.manager-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* ----------- Media Queries ------------ */
 
 @media only screen and (max-width: 1200px) {
@@ -931,13 +1006,27 @@ body {
 
   .tools-left h3,
   .achievements-left h3,
-  .ach-content h3 {
+  .ach-content h3,
+  .manager-left h3 {
     font-size: 38px;
     line-height: 50px;
   }
 
   .tools-right {
     width: 460px;
+  }
+
+  .manager-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .manager-left {
+    width: 100%;
   }
 }
 
@@ -1160,9 +1249,10 @@ body {
   .testimonials-header-content h3,
   .achievements-left h3,
   .ach-content h3,
-  .tools-left h3 {
-    font-size: 20px;
-    line-height: 24px;
+  .tools-left h3,
+  .manager-left h3 {
+    font-size: 22px;
+    line-height: 26px;
   }
 
   .hero-left p,
@@ -1174,7 +1264,8 @@ body {
   .customer-name p,
   .achievements-left p,
   .ach-content p,
-  .tools-left p {
+  .tools-left p,
+  .manager-left p {
     font-size: 12px;
     line-height: 18px;
   }
@@ -1183,8 +1274,13 @@ body {
     display: none;
   }
 
+  .narvbar-nav {
+    padding: 0 10px;
+  }
+
   .hero-section {
     width: 100%;
+    padding: 30px 10px;
   }
 
   .background {
@@ -1193,11 +1289,13 @@ body {
 
   .hero-content {
     width: 100%;
+    padding: 0;
   }
 
   .hero-left {
     width: 100%;
     margin: 0 auto;
+    padding: 0;
   }
 
   .hero-left h2 {
@@ -1265,6 +1363,11 @@ body {
   .tools-right {
     width: 400px;
   }
+
+  .manager-right {
+    width: 400px;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1291,5 +1394,10 @@ body {
 
   .tools-right {
     width: 300px;
+  }
+
+  .manager-right {
+    width: 300px;
+    height: auto;
   }
 }
