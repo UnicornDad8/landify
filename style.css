@@ -679,6 +679,58 @@ body {
   grid-row: 2 / 3;
 }
 
+/* ----------- Tools Section ------------ */
+.tools-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tools-left {
+  width: 400px;
+}
+
+.tools-left h3 {
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.tools-left p {
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  font-feature-settings: "liga" off;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.6;
+}
+
+.tools-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: auto;
+}
+
+.tools-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* ----------- Media Queries ------------ */
 
 @media only screen and (max-width: 1200px) {
@@ -855,14 +907,37 @@ body {
 
   .achievements-left {
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
   }
 
   .achievements-item {
-    width: 340px;
+    width: 420px;
   }
 
   .achievements-left h3 {
     width: 100%;
+  }
+
+  .tools-section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tools-left h3,
+  .achievements-left h3,
+  .ach-content h3 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+
+  .tools-right {
+    width: 460px;
   }
 }
 
@@ -1008,12 +1083,11 @@ body {
 
   .achievements-section {
     max-width: 100%;
-    margin: 0 auto;
   }
 
   .achievements-left {
-    padding: 0 30px;
     width: 100%;
+    margin-left: 0;
   }
 
   .achievements-left h3,
@@ -1059,6 +1133,24 @@ body {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
   }
+
+  .tools-section {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tools-left {
+    width: 100%;
+  }
+
+  .tools-right {
+    margin-top: 30px;
+    width: 500px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1067,7 +1159,8 @@ body {
   .feature-box h4,
   .testimonials-header-content h3,
   .achievements-left h3,
-  .ach-content h3 {
+  .ach-content h3,
+  .tools-left h3 {
     font-size: 20px;
     line-height: 24px;
   }
@@ -1080,7 +1173,8 @@ body {
   .customer-name span,
   .customer-name p,
   .achievements-left p,
-  .ach-content p {
+  .ach-content p,
+  .tools-left p {
     font-size: 12px;
     line-height: 18px;
   }
@@ -1151,6 +1245,26 @@ body {
   .testimonial-3 {
     height: auto;
   }
+
+  .achievements-section,
+  .tools-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .achievements-left,
+  .tools-left {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .tools-right {
+    width: 400px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1173,5 +1287,9 @@ body {
   .btn-primary {
     margin-right: 0;
     margin-bottom: 20px;
+  }
+
+  .tools-right {
+    width: 300px;
   }
 }
