@@ -644,6 +644,7 @@ body {
 }
 
 .achievements-right {
+  margin-top: 60px;
   display: grid;
   grid-templante-columns: repeat(2, 1fr);
   grid-templante-rows: repeat(2, min-content);
@@ -719,9 +720,9 @@ body {
 
 .tools-right {
   display: flex;
+  width: 500px;
   align-items: center;
   justify-content: center;
-  width: 600px;
   height: auto;
 }
 
