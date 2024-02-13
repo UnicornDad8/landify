@@ -10,6 +10,10 @@
 - CSS
 - assets from Figma
 
+## Live Demo
+
+[link](https://landify-six.vercel.app/)
+
 ## 🛠 Getting Started
 
 To get a local copy up and running follow these simple example steps.
